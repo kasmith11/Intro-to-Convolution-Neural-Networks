@@ -3,7 +3,7 @@
 This goal of this repository is to discuss convolutional neural networks (CNN) and how it can be applied towards the MNIST dataset. MNIST is an introductory computer vision dataset with the goal of predicting hand written digits. Each line of code will be broken down in this README in order for clarity of thought and action. This repository will go over Normalization/Reshaping techniques, working with categorical targets, building and compiling each layer of the CNN, and finally fitting the CNN to the data.
 
 ## Normalization/Reshaping
-The first normalization technique is to divide each value in the dataset by 255. This normalization technique works because of how computers read color. Each value in the dataset will be between (0,255) and be in Red, Green, Blue (RGB) format with Red being (255,0,0) and Green being (255,0,0) for example. Dividing each value by 255 will allow for the range of number in the dataset to be between 0 and 1 depending on which colors are in the dataset. 
+The first normalization technique is to divide each value in the dataset by 255. This normalization technique works because of how computers read color. Each value in the dataset will be between (0,255) and be in Red, Green, Blue (RGB) format with Red being (255,0,0) and Green being (0,255,0) for example. Dividing each value by 255 will allow for the range of number in the dataset to be between 0 and 1 depending on which colors are in the dataset. 
 
 More information on Normalization can be found here: https://stackoverflow.com/questions/20486700/why-we-always-divide-rgb-values-by-255
 
