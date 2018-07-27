@@ -27,6 +27,7 @@ Compiling of the model - Helps to configure the learning process, the compiling 
 Fitting the model requires X and Y inputs along with the number of "epochs" that the model will train for. An epochs in this case are the amount of times that the model will pass through the training data. After fitting the model, it finished with and Accuracy of 87.9% and a Loss of 0.39. Descriptions of accuracy and loss can be found here:
 
 Accuracy - https://stackoverflow.com/questions/34518656/how-to-interpret-loss-and-accuracy-for-a-machine-learning-model
+
 Loss - https://www.quora.com/What-does-loss-mean-in-deep-neural-networks
 
 ## Discussion
