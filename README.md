@@ -1,8 +1,8 @@
 # Intro-to-Convolution-Neural-Networks
-The goal of this repository is to discuss convolutional neural networks (CNNs) and how they can be applied towards the MNIST dataset. MNIST is an introductory computer vision dataset where the goal is to predict hand written digits. Each line of code will be broken down in this README in order for transparancy. The goal of this README is also to be a brief introduction into CNNs so there will be links to articles that go into some of the concepts here in more depth. This README will go over Normalization/Reshaping techniques, working with categorical targets, building and compiling each layer of the CNN, and finally fitting the CNN to the data.
+The goal of this repository is to discuss convolutional neural networks (CNNs) and how they can be applied towards the MNIST dataset. MNIST is an introductory computer vision dataset where the goal is to have the model read and predict hand written numbers. Each line of code will be broken down in this README in order for transparancy. This README is also only intended to be a brief introduction into CNNs, so there will be links to articles that go into some of the more complex concepts in more depth. The structure of this README is as follows: Normalization/Reshaping techniques, working with categorical targets, building and compiling each layer of the CNN, and finally fitting the CNN to the data.
 
 ## Normalization/Reshaping
-The first normalization technique is to divide each value in the dataset by 255. This normalization technique works because of how computers read color; each value in the dataset will be between 0 and 255 and be in Red, Green, Blue (RGB) format with Red being (255,0,0) and Green being (0,255,0) for example. Dividing each value by 255 will allow for the range of numbers in the dataset to be between 0 and 1, depending on which colors are in the dataset. 
+The normalization technique used in this example is dividing each value in the dataset by 255. This normalization technique works because of how computers read color. Each value in the dataset will be between 0 and 255 and be in Red, Green, Blue (RGB) format with Red being (255,0,0), Green being (0,255,0), and Blue being (0,0,255) for example. Dividing each value by 255 will allow for the range of numbers in the dataset to be between 0 and 1, depending on which colors are in the dataset. 
 
 More information on Normalization can be found here: https://stackoverflow.com/questions/20486700/why-we-always-divide-rgb-values-by-255
 
@@ -10,7 +10,7 @@ Reshaping is necessary in order to turn each number from a 784 X 1 row into a 28
 Reshaping: https://stackoverflow.com/questions/41848660/why-the-negative-reshape-1-in-mnist-tutorial
 
 ## Working with categorical targets
-In order to work with the categorical targets in this dataset, we must do what known is known as "one-hot" encoding, meaning that each number is represented with a 1 in the dataset. For example a number 0 would be represent with [1,0,0,0,0,0,0,0,0,0] and the number 4 would be represented with [0,0,0,0,1,0,0,0,0,0]. This allows us to train the model by assigning classes instead of having a model that assumes that a number with the class of 4 is greater than a number with the class of 0.
+In order to work with the categorical targets in this dataset, we must do what is known as "one-hot" encoding, meaning that each number is represented with a 1 in the dataset. For example a number 0 would be represent with [1,0,0,0,0,0,0,0,0,0] and the number 4 would be represented with [0,0,0,0,1,0,0,0,0,0]. This allows us to train the model by assigning classes instead of having a model that assumes that a number with the class of 4 is greater than a number with the class of 0.
 
 Working with Categorical Data: https://machinelearningmastery.com/why-one-hot-encode-data-in-machine-learning/
 
@@ -31,4 +31,4 @@ Accuracy - https://stackoverflow.com/questions/34518656/how-to-interpret-loss-an
 Loss - https://www.quora.com/What-does-loss-mean-in-deep-neural-networks
 
 ## Discussion
-To further improve this model in the future, two improvments could be to 1) train the model for more epochs and 2) add more convolution/ pooling layers to the model. Thank you to all of the people/websites linked above who aided me with learning a little bit more about CNNs, if you have any questions or comments about anything you see above or how to get started, feel free to reach out to me at kendallasmith140@gmail.com.
+To further improve this model in the future, two potential improvments could be to 1) train the model for more epochs and 2) add more convolution/ pooling layers to the model. Thank you to all of the people/websites linked above who aided me in learning a little bit more about CNNs. If you have any questions or comments about anything you see above or how to get started, feel free to reach out to me at kendallasmith140@gmail.com.
