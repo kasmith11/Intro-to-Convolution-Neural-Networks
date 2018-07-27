@@ -15,8 +15,8 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
 
 model = Sequential()
-model.add(Conv2D(32, kernel_size=(2,2),padding='same', activation= 'relu'))
-model.add(MaxPool2D(pool_size=(2,2)))
+model.add(Conv2D(32, kernel_size=(3,3),padding='same', activation= 'relu'))
+model.add(MaxPool2D(pool_size=(3,3)))
 model.add(Dropout(0.5))
 model.add(Flatten())
 model.add(Dense(128, activation = 'relu'))
@@ -25,4 +25,7 @@ model.add(Dense(10, activation = 'softmax'))
 
 model.compile(optimizer='adam',loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(X, Y,epochs= 1)
+Performance = model.fit(X, Y,epochs= 1)
+
+print('Model Accuracy: {}'.format(Performance.history['acc']))
+print('Model Loss: {}'.format(Performance.history['loss']))
