@@ -2,7 +2,7 @@
 The goal of this repository is to discuss convolutional neural networks (CNNs) and how they can be applied towards the MNIST dataset. MNIST is an introductory computer vision dataset where the goal is to have the model read and predict hand written numbers. Each line of code will be broken down in this README in order for transparancy. This README is also only intended to be a brief introduction into CNNs, so there will be links to articles that go into some of the more complex concepts in more depth. The structure of this README is as follows: Normalization/Reshaping techniques, working with categorical targets, building and compiling each layer of the CNN, and finally fitting the CNN to the data.
 
 ## Normalization/Reshaping
-The normalization technique used in this example is dividing each value in the dataset by 255. This normalization technique works because of how computers read color values. Each value in the dataset will be between 0 and 255 and be in Red, Green, Blue (RGB) format with Red being (255,0,0), Green being (0,255,0), and Blue being (0,0,255) for example. Dividing each value by 255 will allow for the range of numbers in the dataset to be between 0 and 1, depending on which colors are in the dataset. 
+The normalization technique used in this example is dividing each value in the dataset by 255. This normalization technique works because of how computers read color values. Each value in the dataset will be between 0 and 255 and be in Red, Green, Blue (RGB) format with Red being (255,0,0), Green being (0,255,0), and Blue being (0,0,255) for example. In the dataset here, black has the value of (0,0,0) and white has the value of (255,255,255). Dividing each value by 255 will allow for the range of numbers in the dataset to be between 0 and 1, depending on which colors are in the dataset. 
 
 More information on Normalization can be found here: https://stackoverflow.com/questions/20486700/why-we-always-divide-rgb-values-by-255
 
@@ -17,7 +17,7 @@ Working with Categorical Data: https://machinelearningmastery.com/why-one-hot-en
 ## Building and compiling each layer of the CNN
 Convolutional Layer (Conv2d) and Pooling Layer (MaxPool2d) - The convolutional layer uses matrix multiplication in order to reduce the features down into what is known as a kernel. The MaxPool layer works very similar to the convolutional layer but for this case takes the max value in each window; more information can be found here:  https://hackernoon.com/visualizing-parts-of-convolutional-neural-networks-using-keras-and-cats-5cc01b214e59
 
-Flattening - In order to perform classification on the data, we must flatten the dataset: https://www.tensorflow.org/tutorials/estimators/cnn
+Flattening - In order to perform classification on the data, we must include a flatten layer: https://www.tensorflow.org/tutorials/estimators/cnn
 
 Output Layer - The output layer will be a dense layer that has 10 units (one to represent each class in the dataset 0-9). The output layer will also use the "softmax" activation function which will return the probability that a row belongs to a specific class: https://www.tensorflow.org/tutorials/estimators/cnn
 
