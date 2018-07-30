@@ -19,6 +19,9 @@ Convolutional Layer (Conv2d) and Pooling Layer (MaxPool2d) - The convolutional l
 
 Flattening - In order to perform classification on the data, we must include a flatten layer: https://www.tensorflow.org/tutorials/estimators/cnn
 
+Dropout - Helps in order to avoid overfitting to the training data. Overfitting in short is a problem where your model learns the training data so well that it is not able to generalize well to new data points. Dropout layer:
+https://keras.io/layers/core/#dropout
+
 Output Layer - The output layer will be a dense layer that has 10 units (one to represent each class in the dataset 0-9). The output layer will also use the "softmax" activation function which will return the probability that a row belongs to a specific class: https://www.tensorflow.org/tutorials/estimators/cnn
 
 Compiling of the model - Helps to configure the learning process, the compiling methods used in this example can be found here: https://keras.io/getting-started/sequential-model-guide/. Since this is a multi-class clasification problem, this example uses the compilation methods that are listed on the keras website under "multi-class clasification"
